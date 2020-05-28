@@ -1,0 +1,27 @@
+{
+    "name": "Instablam2",
+    "short_name": "Instablam",
+    "theme_color": "#6367c2",
+    "background_color": "#4e7696",
+    "orientation": "any",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "./icons/icon-72x72",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "./icons/icon-152x152",
+            "sizes": "152x152",
+            "type": "image/png"
+        },
+        {
+            "src": "./icons/icon-512x512",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
