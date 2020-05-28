@@ -1,6 +1,6 @@
 {
     "name": "Instablam2",
-    "short_name": "Instablam",
+    "short_name": "Insta",
     "theme_color": "#6367c2",
     "background_color": "#4e7696",
     "orientation": "any",
@@ -9,17 +9,17 @@
     "start_url": "/",
     "icons": [
         {
-            "src": "./icons/icon-72x72",
+            "src": "./icons/icon-72x72.png",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "./icons/icon-152x152",
+            "src": "./icons/icon-152x152.png",
             "sizes": "152x152",
             "type": "image/png"
         },
         {
-            "src": "./icons/icon-512x512",
+            "src": "./icons/icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
