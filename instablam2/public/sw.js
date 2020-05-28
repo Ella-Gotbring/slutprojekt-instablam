@@ -1,4 +1,4 @@
-const staticCachename = "static-files";
+// const staticCacheName = "static-files";
 const assets = ["/", "/index.html", "/offline.html"];
 
 self.addEventListener('install', event => {
@@ -6,7 +6,7 @@ self.addEventListener('install', event => {
 
     console.log('sw installed at:', new Date().toLocaleTimeString());
     event.waitUntil(
-        caches.open(staticCachename).then((cache) => {
+        caches.open('v1').then((cache) => {
             cache.addAll(assets);
         })
     );
@@ -14,7 +14,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-    self.skipWaiting();
+    // self.skipWaiting();
     console.log("sw activated at:", new Date().toLocaleTimeString());
 });
 
@@ -38,7 +38,7 @@ self.addEventListener('fetch', event => {
 function updateCache(request) {
     return fetch(request).then((response) => {
         if (response) {
-            return caches.open(staticCachename).then((cache) => {
+            return caches.open('v1').then((cache) => {
                 return cache.put(request,
                     response.clone())
                     .then(() => {

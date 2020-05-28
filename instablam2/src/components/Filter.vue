@@ -1,6 +1,6 @@
 <template>
   <div class="filters" v-show="imgUrl">
-    <div class="filter">
+    <div class="setting">
       <label for="contrast">Contrast</label>
       <input
         type="range"
@@ -12,7 +12,7 @@
         v-on:change="changeContrast"
       />
     </div>
-    <div class="filter">
+    <div class="setting">
       <label for="brightness">Brightness</label>
       <input
         type="range"
@@ -25,7 +25,7 @@
         v-on:change="changeBrightness"
       />
     </div>
-    <div class="filter">
+    <div class="setting">
       <label for="contrast">Contrast</label>
       <input
         type="range"
@@ -37,7 +37,7 @@
         v-on:change="changeContrast"
       />
     </div>
-    <div class="filter">
+    <div class="setting">
       <label for="vibrance">Vibrance</label>
       <input
         type="range"
@@ -49,7 +49,7 @@
         v-on:change="changeVibrance"
       />
     </div>
-    <div class="filter">
+    <div class="setting">
       <label for="exposure">Exposure</label>
       <input
         type="range"
@@ -61,7 +61,7 @@
         v-on:change="changeExposure"
       />
     </div>
-    <div class="filter">
+    <div class="setting">
       <label for="saturaction">Saturaction</label>
       <input
         type="range"
@@ -78,69 +78,69 @@
 
 <script>
 export default {
-    props: ["imgUrl"],
-    methods: {
-        changeContrast(event){
-            const value = parseInt(event.target.value);
-            console.log(event.target.value);
-            this.Caman("#photo", this.imgUrl, function(){
-                if(value <-10 && value <10){
-                    this.revert();
-                }
-                this.contrast(value - this.oldValue);
-                this.oldValue = value;
-                this.render();
-            });
-        },
-        changeBrightness(event){
-            const value = parseInt(event.target.value);
-            console.log(event.target.value);
-            this.Caman("#photo", this.imgUrl, function(){
-                if(value <-10 && value <10){
-                    this.revert();
-                }
-                this.brightness(value - this.oldValue);
-                this.oldValue = value;
-                this.render();
-            });
-        },
-        changeVibrance(event){
-            const value = parseInt(event.target.value);
-            console.log(event.target.value);
-            this.Caman("#photo", this.imgUrl, function(){
-                if(value <-10 && value <10){
-                    this.revert();
-                }
-                this.vibrance(value - this.oldValue);
-                this.oldValue = value;
-                this.render();
-            });
-        },
-        changeExposure(event){
-            const value = parseInt(event.target.value);
-            console.log(event.target.value);
-            this.Caman("#photo", this.imgUrl, function(){
-                if(value <-10 && value <10){
-                    this.revert();
-                }
-                this.exposure(value - this.oldValue);
-                this.oldValue = value;
-                this.render();
-            });
-        },
-        changeSaturaction(event){
-            const value = parseInt(event.target.value);
-            console.log(event.target.value);
-            this.Caman("#photo", this.imgUrl, function(){
-                if(value <-10 && value <10){
-                    this.revert();
-                }
-                this.saturaction(value - this.oldValue);
-                this.oldValue = value;
-                this.render();
-            });
+  props: ["imgUrl"],
+  methods: {
+    changeContrast(event) {
+      const value = parseInt(event.target.value);
+      console.log(event.target.value);
+      this.Caman("#photo", this.imgUrl, function() {
+        if (value < -10 && value < 10) {
+          this.revert();
         }
+        this.contrast(value - this.oldValue);
+        this.oldValue = value;
+        this.render();
+      });
+    },
+    changeBrightness(event) {
+      const value = parseInt(event.target.value);
+      console.log(event.target.value);
+      this.Caman("#photo", this.imgUrl, function() {
+        if (value < -10 && value < 10) {
+          this.revert();
+        }
+        this.brightness(value - this.oldValue);
+        this.oldValue = value;
+        this.render();
+      });
+    },
+    changeVibrance(event) {
+      const value = parseInt(event.target.value);
+      console.log(event.target.value);
+      this.Caman("#photo", this.imgUrl, function() {
+        if (value < -10 && value < 10) {
+          this.revert();
+        }
+        this.vibrance(value - this.oldValue);
+        this.oldValue = value;
+        this.render();
+      });
+    },
+    changeExposure(event) {
+      const value = parseInt(event.target.value);
+      console.log(event.target.value);
+      this.Caman("#photo", this.imgUrl, function() {
+        if (value < -10 && value < 10) {
+          this.revert();
+        }
+        this.exposure(value - this.oldValue);
+        this.oldValue = value;
+        this.render();
+      });
+    },
+    changeSaturaction(event) {
+      const value = parseInt(event.target.value);
+      console.log(event.target.value);
+      this.Caman("#photo", this.imgUrl, function() {
+        if (value < -10 && value < 10) {
+          this.revert();
+        }
+        this.saturaction(value - this.oldValue);
+        this.oldValue = value;
+        this.render();
+      });
     }
+  }
 };
 </script>
 
