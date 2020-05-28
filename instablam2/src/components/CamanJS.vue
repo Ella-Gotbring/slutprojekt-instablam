@@ -145,4 +145,23 @@ export default {
 </script>
 
 <style scoped>
+.filters {
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.setting {
+  width: 200px;
+}
+
+@media screen and (min-width: 800px) {
+  .filters {
+    width: 100%;
+  }
+  input {
+    width: 4500px;
+    justify-items: center;
+  }
+}
 </style>

@@ -5,15 +5,15 @@
     </div>
     <video id="me" class="camera"></video>
     <canvas id="photo" v-show="imgUrl"></canvas>
-    <Filter :imgUrl="imgUrl" />
+    <CamanJS :imgUrl="imgUrl" />
   </div>
 </template>
 
 <script>
-import Filter from "@/components/Filter.vue";
+import CamanJS from "@/components/CamanJS.vue";
 export default {
   components: {
-    Filter
+    CamanJS
   },
   data() {
     return {
