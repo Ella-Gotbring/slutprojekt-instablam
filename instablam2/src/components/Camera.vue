@@ -68,8 +68,9 @@ export default {
 
 <style scoped>
 .button {
-  background: mistyrose;
+  /* background: mistyrose; */
   padding: 1rem;
+  margin: auto;
   width: 150px;
   border-radius: 3px;
 }
@@ -81,6 +82,7 @@ export default {
   #me {
     height: 500px;
     width: 750px;
+    margin: auto;
   }
   canvas {
     margin: auto;
@@ -88,10 +90,10 @@ export default {
     max-height: 500px;
   }
 }
-@media screen {
+@media screen and (min-width: 1024px) {
   #me {
     margin: 1rem;
-    height: 400px;
+    height: 700px;
     width: 850px;
   }
 }
