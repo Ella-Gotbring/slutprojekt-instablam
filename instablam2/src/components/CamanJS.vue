@@ -155,12 +155,17 @@ export default {
   width: 200px;
 }
 
+.label {
+  margin: auto;
+  padding: 3rem;
+}
+
 @media screen and (min-width: 800px) {
   .filters {
     width: 100%;
   }
   input {
-    width: 4500px;
+    width: 450px;
     justify-items: center;
   }
 }

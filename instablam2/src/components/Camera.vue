@@ -67,4 +67,32 @@ export default {
 </script>
 
 <style scoped>
+.button {
+  background: mistyrose;
+  padding: 1rem;
+  width: 150px;
+  border-radius: 3px;
+}
+#me {
+  width: 300px;
+}
+
+@media screen and (min-width: 800px) {
+  #me {
+    height: 500px;
+    width: 750px;
+  }
+  canvas {
+    margin: auto;
+    max-width: 850px;
+    max-height: 500px;
+  }
+}
+@media screen {
+  #me {
+    margin: 1rem;
+    height: 400px;
+    width: 850px;
+  }
+}
 </style>
